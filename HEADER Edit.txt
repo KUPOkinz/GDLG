@@ -1,0 +1,27 @@
+REPLACE [https://drive.google.com/uc?id=] 
+WITH [https://www.googleapis.com/drive/v3/files/]
+
+REPLACE [&amp;amp;]
+WITH [?alt=media&amp;key=GOOGLEAPIKEY&amp;]
+
+REPLACE [ " size="0"/>]
+WITH [" size="0"/>]
+
+## Manual Editting the XML File
+
+REPLACE 
+<?xml version='1.0' encoding='UTF-8'?>
+<datafile>
+  </header>
+
+WITH
+<datafile>
+	<header>
+		<emu_name>NULL</emu_name>
+		<emu_description>NULL___NULL</emu_description>
+		<emu_baseurl>https://www.googleapis.com/drive/v3/files/</emu_baseurl>
+		<emu_downloadpath>default</emu_downloadpath>
+		<emu_postdlaction>unzip_rom</emu_postdlaction>
+		<emu_comment></emu_comment>
+	</header>
+
